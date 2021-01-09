@@ -1,0 +1,39 @@
+﻿@model Product
+<div class="row">
+    <div class="col-4">
+        <form asp-action="SaveProduct" method="post" class="form-horizontal" role="form">
+            <!-- The hidden input is used for model binding values that are not shown in the form -->
+            <input type="hidden" name="productId" value="@Model.ProductId" />
+            <input type="hidden" name="projectId" value="@Model.ProjectId" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div>
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" name="ProductName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductNuberOfUnits" class="control-label"></label>
+                <input asp-for="ProductNuberOfUnits" name="ProductNuberOfUnits" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductUnit" class="control-label"></label>
+                <input asp-for="ProductUnit" name="ProductUnit" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductUnitPrice" class="control-label"></label>
+                <input asp-for="ProductUnitPrice" name="ProductUnitPrice" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductSupplierName" class="control-label"></label>
+                <input asp-for="ProductSupplierName" name="ProductSupplierName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductInfoLink" class="control-label"></label>
+                <input asp-for="ProductInfoLink" name="ProductInfoLink" class="form-control" />
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary" asp-action="Projects">Tillbaka</a>
+                <input type="submit" value="Spara" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿@model Project
+<div class="row">
+    <div class="col-4">
+        <form asp-action="SaveProject" method="post" class="form-horizontal" role="form">
+            <!-- The hidden input is used for model binding values that are not shown in the form -->
+            <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+            <input type="hidden" name="ProjectOwner" value="@Model.ProjectOwner" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProjectName" class="control-label"></label>
+                <input asp-for="ProjectName" name="ProjectName" class="form-control" value="@Model.ProjectName" />
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary" asp-action="Projects">Tillbaka</a>
+                <input type="submit" value="Spara" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

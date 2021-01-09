@@ -1,0 +1,38 @@
+﻿@model CreateProductViewModel
+<div class="row">
+    <div class="col-4">
+        <form asp-action="SaveProductInProject" method="post" class="form-horizontal" role="form">
+            <!-- The hidden input is used for model binding values that are not shown in the form -->
+            <input type="hidden" name="ProjectID" value="@Model.ProjectId" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div>
+                <label asp-for="Product.ProductName" class="control-label"></label>
+                <input asp-for="Product.ProductName" name="ProductName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductNuberOfUnits" class="control-label"></label>
+                <input asp-for="Product.ProductNuberOfUnits" name="ProductNuberOfUnits" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductUnit" class="control-label"></label>
+                <input asp-for="Product.ProductUnit" name="ProductUnit" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductUnitPrice" class="control-label"></label>
+                <input asp-for="Product.ProductUnitPrice" name="ProductUnitPrice" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductSupplierName" class="control-label"></label>
+                <input asp-for="Product.ProductSupplierName" name="ProductSupplierName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductInfoLink" class="control-label"></label>
+                <input asp-for="Product.ProductInfoLink" name="ProductInfoLink" class="form-control" />
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary" asp-action="Projects">Tillbaka</a>
+                <input type="submit" value="Spara" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

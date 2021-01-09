@@ -1,0 +1,89 @@
+﻿@model ProjectsViewModel
+
+<!-- The User.Identity.Name is the username of the current logged in user.
+     If that username is in the list UsersThatArePurchasers the information that are special
+     for purchasers are shown-->
+@if(Model.ProjectRepository.UsersThatArePurchasers.FirstOrDefault(u => u == User.Identity.Name) != null)
+{
+    <div class="row">
+        <div class="col-12 border border-dark m-2 card-body">
+            <div><h3>Summering project:</h3></div>
+            <div><p>Total kostnad alla projekt: @Model.ProjectRepository.GetTotalCostAllProjects() kr</p></div>
+            <div><p>Genomsnittskostnad alla projekt: @Model.ProjectRepository.GetAverageCostAllProjects() kr</p></div>
+        </div>    
+    </div>
+}
+
+<div class="row">
+    <div class="col-3 mt-2 mb-2 d-flex align-content-center">
+        <h1 class="text-primary">Projekt</h1>
+    </div>
+    <div class="col-6">
+        <p>OBS! Om inte summorna för priser stämmer gör en refresh på sidan.<br />Detta är en tillfällig lösning tills orsaken hittas.</p>
+    </div>
+    <div class="col-2">
+        <a class="btn btn-primary" asp-action="CreateProject">Nytt projekt.</a>
+    </div>
+</div>
+
+<!-- The current logged in username is passed to the GetProjectsByOwner.
+     The method returns a list of all projects that have the corresponding username as owner.
+     If the username is an purchaser the method returns all projects. -->
+@foreach (var project in Model.ProjectRepository.GetProjectsByOwner(@User.Identity.Name))
+{
+    <div class="row border-right border-bottom border-left border-dark mb-2">
+        <table class="table">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Namn</th>
+                    <th scope="col">Inredare</th>
+                    <th scope="col">Totalpris</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>@project.ProjectName</strong></td>
+                    <td>@project.ProjectOwner</td>
+                    <td>@Model.ProjectRepository.GetProjectTotalCost(project.ProjectId)</td>
+                    <td><a onclick="return confirm('Vill du verkligen ta bort projektet?')" class="btn btn-danger" asp-action="DeleteProject" asp-route-ProjectId="@project.ProjectId">Ta bort projekt</a> <a class="btn btn-success" asp-action="EditProject" asp-route-ProjectId="@project.ProjectId">Ändra projekt</a> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Productnamn</th>
+                    <th scope="col">Antal</th>
+                    <th scope="col">Enhet</th>
+                    <th scope="col">Styckpris</th>
+                    <th scope="col">Totalpris</th>
+                    <th scope="col">Leverantör</th>
+                    <th scope="col">Infolänk</th>
+                    <th scope="col"><a class="btn btn-success" asp-action="CreateProduct" asp-route-ProjectId="@project.ProjectId">Lägg till produkt.</a></th>
+                </tr>
+            </thead>
+            <!-- All products in the specific project are listed -->
+            @foreach (var product in Model.ProductRepository.GetAllProductsInProject(project.ProjectId))
+            {
+
+                <tbody>
+                    <tr>
+                        <td>@product.ProductName</td>
+                        <td>@product.ProductNuberOfUnits</td>
+                        <td>@product.ProductUnit</td>
+                        <td>@product.ProductUnitPrice kr</td>
+                        <td>@Model.ProductRepository.GetProductTotalPrice(product.ProductId) kr</td>
+                        <td>@product.ProductSupplierName</td>
+                        <td><a target="_blank" rel="noopener noreferrer" href="@product.ProductInfoLink">@product.ProductInfoLink</a></td>
+                        <td><a onclick="return confirm('Vill du verkligen ta bort produkten?')" class="btn btn-danger" asp-action="DeleteProduct" asp-route-ProductId="@product.ProductId">Ta bort produkt</a> <a class="btn btn-success" asp-action="EditProduct" asp-route-ProductId="@product.ProductId">Ändra</a></td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+}
+
