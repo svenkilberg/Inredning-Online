@@ -29,13 +29,14 @@ namespace InredningOnline
         public string ProductUnit { get; set; }
 
         [Required(ErrorMessage = "Ange styckpris")]
-        [Display(Name = "Styckpris")]        
-        [Range(0, double.MaxValue)]
+        [Display(Name = "Styckpris")]
+        [RegularExpression(@"^[1-9]\d*$", ErrorMessage = "Only integer values are allowed.")]
+        [Range(0, int.MaxValue)]
         [DisplayFormat(DataFormatString = "{0:C}")]
-        public double ProductUnitPrice { get; set; }
+        public int ProductUnitPrice { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:C}")]
-        public double ProductTotalPrice { get; set; }
+        public int ProductTotalPrice { get; set; }
 
         [Required(ErrorMessage = "Ange leverantör")]
         [Display(Name = "Leverantör")]

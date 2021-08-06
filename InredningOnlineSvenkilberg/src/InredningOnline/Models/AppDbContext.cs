@@ -82,7 +82,7 @@ namespace InredningOnline.Models
                 ProductName = "Matbord",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 600.00,
+                ProductUnitPrice = 600,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 1                
@@ -94,7 +94,7 @@ namespace InredningOnline.Models
                 ProductName = "Stolar",
                 ProductNuberOfUnits = 4,
                 ProductUnit = "st",
-                ProductUnitPrice = 200.0,
+                ProductUnitPrice = 200,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 1
@@ -106,7 +106,7 @@ namespace InredningOnline.Models
                 ProductName = "Duk",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 60.0,
+                ProductUnitPrice = 60,
                 ProductSupplierName = "Tygboden AB",
                 ProductInfoLink = "",
                 ProjectId = 1
@@ -118,7 +118,7 @@ namespace InredningOnline.Models
                 ProductName = "Konferensbord",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 3000.0,
+                ProductUnitPrice = 3000,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 2
@@ -130,7 +130,7 @@ namespace InredningOnline.Models
                 ProductName = "Konferensstol",
                 ProductNuberOfUnits = 6,
                 ProductUnit = "st",
-                ProductUnitPrice = 800.0,
+                ProductUnitPrice = 800,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 2
@@ -142,7 +142,7 @@ namespace InredningOnline.Models
                 ProductName = "Whiteboardtavla",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 1200.0,
+                ProductUnitPrice = 1200,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 2
@@ -154,7 +154,7 @@ namespace InredningOnline.Models
                 ProductName = "Whiteboardpenna",
                 ProductNuberOfUnits = 5,
                 ProductUnit = "st",
-                ProductUnitPrice = 20.0,
+                ProductUnitPrice = 20,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 2
@@ -166,7 +166,7 @@ namespace InredningOnline.Models
                 ProductName = "Kuddar",
                 ProductNuberOfUnits = 10,
                 ProductUnit = "st",
-                ProductUnitPrice = 80.0,
+                ProductUnitPrice = 80,
                 ProductSupplierName = "IKEA",
                 ProductInfoLink = "http://www.ikea.se",
                 ProjectId = 3
@@ -178,7 +178,7 @@ namespace InredningOnline.Models
                 ProductName = "Leksakskök",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 1500.0,
+                ProductUnitPrice = 1500,
                 ProductSupplierName = "Leksakhörnan",
                 ProductInfoLink = "",
                 ProjectId = 3

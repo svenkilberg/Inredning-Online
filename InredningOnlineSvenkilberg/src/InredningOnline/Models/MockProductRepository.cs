@@ -18,8 +18,8 @@ namespace InredningOnline
                     ProductName = "Matta",
                     ProductNuberOfUnits = 1,
                     ProductUnit = "st",
-                    ProductUnitPrice = 200.0,
-                    ProductTotalPrice = 200.0,
+                    ProductUnitPrice = 200,
+                    ProductTotalPrice = 200,
                     ProductInfoLink = "",
                     ProjectId = 1
                 },
@@ -30,8 +30,8 @@ namespace InredningOnline
                     ProductName = "Gardintyg",
                     ProductNuberOfUnits = 10,
                     ProductUnit = "meter",
-                    ProductUnitPrice = 20.0,
-                    ProductTotalPrice = 200.0,
+                    ProductUnitPrice = 20,
+                    ProductTotalPrice = 200,
                     ProductInfoLink = "",
                     ProjectId = 1
                 },
@@ -42,8 +42,8 @@ namespace InredningOnline
                     ProductName = "Målarfärg",
                     ProductNuberOfUnits = 40,
                     ProductUnit = "liter",
-                    ProductUnitPrice = 30.0,
-                    ProductTotalPrice = 1200.0,
+                    ProductUnitPrice = 30,
+                    ProductTotalPrice = 1200,
                     ProductInfoLink = "",
                     ProjectId = 2
                 },
@@ -54,7 +54,7 @@ namespace InredningOnline
                     ProductName = "Tapet",
                     ProductNuberOfUnits = 20,
                     ProductUnit = "rullar",
-                    ProductUnitPrice = 50.0,
+                    ProductUnitPrice = 50,
                     ProductTotalPrice = 1000,
                     ProductInfoLink = "",
                     ProjectId = 2
