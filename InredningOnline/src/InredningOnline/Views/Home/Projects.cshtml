@@ -56,7 +56,7 @@
         <table class="table">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">Productnamn</th>
+                    <th scope="col">Produktnamn</th>
                     <th scope="col">Antal</th>
                     <th scope="col">Enhet</th>
                     <th scope="col">Styckpris</th>
@@ -78,7 +78,7 @@
                         <td>@product.ProductUnitPrice kr</td>
                         <td>@Model.ProductRepository.GetProductTotalPrice(product.ProductId) kr</td>
                         <td>@product.ProductSupplierName</td>
-                        <td><a target="_blank" rel="noopener noreferrer" href="@product.ProductInfoLink">@product.ProductInfoLink</a></td>
+                        <td><a target="_blank" rel="noopener noreferrer" href="@product.ProductInfoLink">@product.ProductName</a></td>
                         <td><a onclick="return confirm('Vill du verkligen ta bort produkten?')" class="btn btn-danger" asp-action="DeleteProduct" asp-route-ProductId="@product.ProductId">Ta bort produkt</a> <a class="btn btn-success" asp-action="EditProduct" asp-route-ProductId="@product.ProductId">Ändra</a></td>
                     </tr>
                 </tbody>
