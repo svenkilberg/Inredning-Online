@@ -72,7 +72,7 @@ namespace InredningOnline.Models
             // seed projecs
             modelBuilder.Entity<Project>().HasData(new Project { ProjectId = 1, ProjectName = "Restaurangen", ProjectOwner = "bengt@ballong.se" });
             modelBuilder.Entity<Project>().HasData(new Project { ProjectId = 2, ProjectName = "Konferensrummet", ProjectOwner = "bengt@ballong.se" });
-            modelBuilder.Entity<Project>().HasData(new Project { ProjectId = 3, ProjectName = "Dagisavdelningen", ProjectOwner = "sigrid@ballong.se" });
+            modelBuilder.Entity<Project>().HasData(new Project { ProjectId = 3, ProjectName = "Förskoleavdelningen", ProjectOwner = "sigrid@ballong.se" });
             modelBuilder.Entity<Project>().HasData(new Project { ProjectId = 4, ProjectName = "Lekplatsen", ProjectOwner = "sigrid@ballong.se" });
 
             // seed products
@@ -82,9 +82,9 @@ namespace InredningOnline.Models
                 ProductName = "Matbord",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 600,
+                ProductUnitPrice = 795,
                 ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductInfoLink = "https://www.ikea.com/se/sv/p/lerhamn-bord-ljus-antikbets-vitbets-40444255/",
                 ProjectId = 1                
             });
 
@@ -94,9 +94,9 @@ namespace InredningOnline.Models
                 ProductName = "Stolar",
                 ProductNuberOfUnits = 4,
                 ProductUnit = "st",
-                ProductUnitPrice = 200,
+                ProductUnitPrice = 325,
                 ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductInfoLink = "https://www.ikea.com/se/sv/p/lerhamn-stol-ljus-antikbets-vittaryd-beige-20259423/",
                 ProjectId = 1
             });
 
@@ -106,9 +106,9 @@ namespace InredningOnline.Models
                 ProductName = "Duk",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 60,
-                ProductSupplierName = "Tygboden AB",
-                ProductInfoLink = "",
+                ProductUnitPrice = 280,
+                ProductSupplierName = "Hemtex",
+                ProductInfoLink = "https://www.hemtex.se/article/avtorkningsbar_duk_167015?attr1_id=163",
                 ProjectId = 1
             });
 
@@ -118,9 +118,9 @@ namespace InredningOnline.Models
                 ProductName = "Konferensbord",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 3000,
-                ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductUnitPrice = 5995,
+                ProductSupplierName = "AJ-produkter",
+                ProductInfoLink = "https://www.ajprodukter.se/konferensmobler/konferensbord/konferensbord/55570-34734294.wf?productId=34734296",
                 ProjectId = 2
             });
 
@@ -130,9 +130,9 @@ namespace InredningOnline.Models
                 ProductName = "Konferensstol",
                 ProductNuberOfUnits = 6,
                 ProductUnit = "st",
-                ProductUnitPrice = 800,
-                ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductUnitPrice = 2995,
+                ProductSupplierName = "AJ-produkter",
+                ProductInfoLink = "https://www.ajprodukter.se/konferensmobler/konferensstolar/stol/55568-34286133.wf?productId=34286131",
                 ProjectId = 2
             });
 
@@ -142,21 +142,21 @@ namespace InredningOnline.Models
                 ProductName = "Whiteboardtavla",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 1200,
-                ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductUnitPrice = 3195,
+                ProductSupplierName = "AJ-produkter",
+                ProductInfoLink = "https://www.ajprodukter.se/presentation/whiteboardtavlor/whiteboard/55574-19442502.wf?productId=19442586",
                 ProjectId = 2
             });
 
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 7,
-                ProductName = "Whiteboardpenna",
+                ProductName = "Whiteboardpennor",
                 ProductNuberOfUnits = 5,
                 ProductUnit = "st",
-                ProductUnitPrice = 20,
-                ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductUnitPrice = 85,
+                ProductSupplierName = "AJ-produkter",
+                ProductInfoLink = "https://www.ajprodukter.se/presentation/tillbehor-presentation/whiteboardpennor/18640637-19448884.wf?productId=19448842",
                 ProjectId = 2
             });
 
@@ -166,9 +166,9 @@ namespace InredningOnline.Models
                 ProductName = "Kuddar",
                 ProductNuberOfUnits = 10,
                 ProductUnit = "st",
-                ProductUnitPrice = 80,
+                ProductUnitPrice = 699,
                 ProductSupplierName = "IKEA",
-                ProductInfoLink = "http://www.ikea.se",
+                ProductInfoLink = "https://www.ikea.com/se/sv/p/sandared-sittkudde-gra-00385309/",
                 ProjectId = 3
             });
 
@@ -178,9 +178,9 @@ namespace InredningOnline.Models
                 ProductName = "Leksakskök",
                 ProductNuberOfUnits = 1,
                 ProductUnit = "st",
-                ProductUnitPrice = 1500,
-                ProductSupplierName = "Leksakhörnan",
-                ProductInfoLink = "",
+                ProductUnitPrice = 899,
+                ProductSupplierName = "IKEA",
+                ProductInfoLink = "https://www.ikea.com/se/sv/p/duktig-leksakskoek-bjoerk-60319972/",
                 ProjectId = 3
             });
 
