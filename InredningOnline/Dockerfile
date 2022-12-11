@@ -8,12 +8,12 @@ EXPOSE 443
 
 # Copy csproj and restore as distinct layers
 COPY *.sln .
-COPY src/InredningOnline/*.csproj ./src/InredningOnline/
+COPY /src/InredningOnline/*.csproj ./src/InredningOnline/
 COPY test/InredningOnline.Tests/*.csproj ./test/InredningOnline.Tests/
 RUN dotnet restore
 
 # Copy everything else and build website
-COPY src/InredningOnline/. ./src/InredningOnline/
+COPY /src/InredningOnline/. ./src/InredningOnline/
 WORKDIR /App/src/InredningOnline/
 RUN dotnet publish -c release -o /AppOutput/InredningOnline --no-restore
 
